@@ -102,7 +102,7 @@ export default function Tracks({ access_token }) {
                 </a>
                 <div className="flex text-2xl items-center justify-center">
                   {e.artists.map((el, index) => (
-                    <>
+                    <div key={index}>
                       <a
                         key={index}
                         href={el?.external_urls?.spotify}
@@ -116,7 +116,7 @@ export default function Tracks({ access_token }) {
                       ) : (
                         " "
                       )}
-                    </>
+                    </div>
                   ))}
                 </div>
                 {e.is_local ? (
