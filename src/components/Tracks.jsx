@@ -31,6 +31,9 @@ export default function Tracks({ access_token }) {
       });
   }, [term]);
 
+  useEffect(() => {
+    document.title = "Top Tracks - SFS";
+  }, []);
   return (
     <div className="px-10 pb-10 flex flex-col items-center justify-center text-center min-w-full">
       <h1 className="text-center text-5xl mt-10 font-black white uppercase">

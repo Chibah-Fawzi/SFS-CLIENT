@@ -13,7 +13,9 @@ export default function App() {
   const [cookies, setCookie, removeCookie] = useCookies(["access_token"]);
   const [expires, setExpires] = useState();
   const [user, setUser] = useState({});
-
+  useEffect(() => {
+    document.title = "Home - SFS";
+  }, []);
   function getUser(refresh_token) {
     axios
       .get("https://api.spotify.com/v1/me", {

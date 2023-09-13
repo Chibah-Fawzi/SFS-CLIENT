@@ -9,6 +9,10 @@ export default function Artists({ access_token }) {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    document.title = "Top Artists - SFS";
+  }, []);
+
+  useEffect(() => {
     let time_range =
       term === 0
         ? "short_term"
